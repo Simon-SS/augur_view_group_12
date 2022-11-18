@@ -1,20 +1,33 @@
 {% if repos %}
 <!-- Top pagination menu start -->
-<nav aria-label="Repository pagination menu" class="overflow-auto">
-    <ul class="pagination">
-        <li class="page-item {% if activePage == 1 %} disabled {% else %} w3-hover-purple {% endif %}">
-            <a class="page-link" href="{{ url_for(PS, q=query_key, p=(activePage - 1), s=sorting, r=reverse)}}" {% if activePage == 1 %} tabindex="-1" {% endif %}>Previous</a>
-        </li>
-        {% for page in range(1, pages|int + 1) %}
-        <li class="page-item">
-            <a class="page-link {% if page == activePage %} paginationActive {% else %} w3-hover-blue {% endif %}" href="{{ url_for(PS, q=query_key, p=page, s=sorting, r=reverse)}}">{{page}}</a>
-        </li>
-        {% endfor %}
-        <li class="page-item {% if activePage == pages|int %} disabled {% endif %}">
-            <a class="page-link" href="{{ url_for(PS, q=query_key, p=(activePage + 1), s=sorting, r=reverse)}}" {% if activePage == pages|int %} tabindex="-1" {% endif %}>Next</a>
-        </li>
-    </ul>
-</nav>
+<div>
+    <div class="d-flex row">
+        <div class="d-flex col">
+            <nav aria-label="Repository pagination menu" class="overflow-auto">
+                <ul class="pagination">
+                    <li class="page-item {% if activePage == 1 %} disabled {% else %} w3-hover-purple {% endif %}">
+                        <a class="page-link" href="{{ url_for(PS, q=query_key, p=(activePage - 1), s=sorting, r=reverse)}}" {% if activePage == 1 %} tabindex="-1" {% endif %}>Previous</a>
+                    </li>
+                    {% for page in range(1, pages|int + 1) %}
+                    <li class="page-item">
+                        <a class="page-link {% if page == activePage %} paginationActive {% else %} w3-hover-blue {% endif %}" href="{{ url_for(PS, q=query_key, p=page, s=sorting, r=reverse)}}">{{page}}</a>
+                    </li>
+                    {% endfor %}
+                    <li class="page-item {% if activePage == pages|int %} disabled {% endif %}">
+                        <a class="page-link" href="{{ url_for(PS, q=query_key, p=(activePage + 1), s=sorting, r=reverse)}}" {% if activePage == pages|int %} tabindex="-1" {% endif %}>Next</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="d-flex col justify-content-end m-2">
+            <div class="btn-group " role="group" aria-label="Card/Table Toggle buttons">
+                <button type="button" class="btn btn-light btn-outline-dark">Card</button>
+                <button type="button" class="btn btn-light btn-outline-dark">Table</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!-- Table start -->
 {# Create the header row for the repo table:
     Here we dynamically generate the header row by defining a dictionary list
