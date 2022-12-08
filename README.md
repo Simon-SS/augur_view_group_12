@@ -1,3 +1,7 @@
+# Group 12 Semester Project
+- See Group12 folder for documents
+- See issues for sprint updates
+
 # Card Dashboard Feature
 
 - Move table/card view out of dropdown into **toggle button** on page
