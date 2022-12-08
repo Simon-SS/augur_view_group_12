@@ -32,6 +32,7 @@
                 </li>
                 {% endif %}
 
+                <!-- Old repo dropdown -->
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle {% if title == 'Repos' %} active {% endif %}" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Repos
@@ -41,6 +42,11 @@
                         <li><a class="dropdown-item" href="{{ url_for('repo_card_view') }}">Card View</a></li>
                     </ul>
                 </li>
+
+                <!-- Implement new view for table/card together -->
+                <!-- <li class="nav-item">
+                    <a class="nav-link {% if title == 'Groups' %} active {% endif %}" aria-current="page" href=" {{ url_for('repo_table_view') }}">Repos</a>
+                </li> -->
 
                 <!-- STATIC NAVBAR SECTION -->
                 <li class="nav-item">
