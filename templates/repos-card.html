@@ -1,5 +1,12 @@
 {% if repos %}
     <div class="container-fluid mt-4">
+        <div class="d-flex col justify-content-end m-2">
+            <div class="btn-group " role="group" aria-label="Card/Table Toggle buttons">
+                <button type="button" class="btn btn-light btn-outline-dark"><a class="link-dark text-decoration-none" href="{{ url_for('repo_table_view') }}">Table View</a></button>
+                <button type="button" class="btn btn-light btn-outline-dark">Card View</button>
+
+            </div>
+        </div>
         <div class="row justify-content-center">
             {% for repo in repos %}
             <!-- Get rid of 2 empty repos -->
