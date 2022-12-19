@@ -53,7 +53,7 @@
                 <!--My code-->
                 <li class="nav-item">
                     <!--Note Right now this just adds in a nav link to status just the title of it is different-->
-                    <a class ="nav-link {%if title = 'About' %} active {% endif %}" aria-current="page" href =  "{{ url_for('about_view') }}">About New Features</a>
+                    <a class ="nav-link {% if title == 'About' %} active {% endif %}" aria-current="page" href =  "{{ url_for('about_view') }}">About New Features</a>
                 </li>
                 <!--End of my code-->
 
