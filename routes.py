@@ -117,6 +117,14 @@ def status_view():
     return render_module("status", title="Status")
 
 """ ----------------------------------------------------------------
+About:
+    The route returns the about page, which should display information
+    regarding the new features we have addded to the project
+"""
+@app.route('/about')
+def about_view():
+    return render_module("about", title="About")
+""" ----------------------------------------------------------------
 login:
     Under development
 """

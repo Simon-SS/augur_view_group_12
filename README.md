@@ -1,24 +1,3 @@
-# Group 12 Semester Project
-- See Group12 folder for documents
-- See issues for sprint updates
-
-# Card Dashboard Feature
-
-- Move table/card view out of dropdown into **toggle button** on page
-![ReposDropdownAfter](https://user-images.githubusercontent.com/44858849/202265180-57bf754b-9e0d-4256-9805-70f9b0a14d41.png)
-- **Remove empty results** and non-useful results on card view
-![CardViewAfter](https://user-images.githubusercontent.com/44858849/202265134-6af1bc64-0572-40df-a317-062fadf27da1.png)
-- **Change dashboard view into dropdowns** to view the whole picture better
-![DashboardAfter](https://user-images.githubusercontent.com/44858849/202265023-6511e465-949a-43e3-8734-1043114c469d.png)
-
-## Testing
-- [ ] Navbar change should be consistent on all views
-- [ ] Repos dropdown changed to button
-- [ ] Toggle button should function as the dropdown in previous version
-- [ ] Empty results should never appear
-- [ ] Dashboard dropdowns should still allow for "zoomed in" view (zoom already implemented)
-- [ ] Dropdowns should include all data visualizations across all repos
-
 # augur_view
 
 HTML frontend for Chaoss/Augur, written with Bootstrap and served by Flask

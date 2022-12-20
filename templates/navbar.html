@@ -43,6 +43,14 @@
                 <li class="nav-item">
                     <a class="nav-link {% if title == 'Status' %} active {% endif %}" aria-current="page" href="{{ url_for('status_view') }}">Collection Status</a>
                 </li>
+
+                <!--My code-->
+                <li class="nav-item">
+                    <!--Note Right now this just adds in a nav link to status just the title of it is different-->
+                    <a class ="nav-link {% if title == 'About' %} active {% endif %}" aria-current="page" href =  "{{ url_for('about_view') }}">About New Features</a>
+                </li>
+                <!--End of my code-->
+
                 <!-- .junk->NAVBAR_EXTRAS -->
             </ul>
             {# <ul class="navbar-nav navbar-right">
