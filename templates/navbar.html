@@ -32,14 +32,8 @@
                 </li>
                 {% endif %}
 
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle {% if title == 'Repos' %} active {% endif %}" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Repos
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="{{ url_for('repo_table_view') }}">Table View</a></li>
-                        <li><a class="dropdown-item" href="{{ url_for('repo_card_view') }}">Card View</a></li>
-                    </ul>
+                <li class="nav-item">
+                    <a class="nav-link {% if title == 'Groups' %} active {% endif %}" aria-current="page" href=" {{ url_for('repo_table_view') }}">Repos</a>
                 </li>
 
                 <!-- STATIC NAVBAR SECTION -->
